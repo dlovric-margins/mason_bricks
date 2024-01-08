@@ -46,3 +46,7 @@ app.*.map.json
 # Only for this project
 lib
 .metadata
+/analysis_options.yaml
+/mason-lock.json
+/pubspec.yaml
+/pubspec.lock
