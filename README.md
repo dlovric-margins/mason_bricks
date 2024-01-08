@@ -1,6 +1,1 @@
-# analysis_options
-```
-analyzer:
-  exclude: 
-    - bricks/**
-```
+# Mason bricks
