@@ -42,4 +42,9 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Only for this project
 lib
+pubspec.yaml
+pubspec.lock
+.metadata
