@@ -44,7 +44,7 @@ app.*.map.json
 /android/app/release
 
 # Only for this project
-lib
+/lib
 .metadata
 /analysis_options.yaml
 /mason-lock.json
