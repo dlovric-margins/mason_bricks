@@ -45,6 +45,4 @@ app.*.map.json
 
 # Only for this project
 lib
-pubspec.yaml
-pubspec.lock
 .metadata
