@@ -1,17 +1,41 @@
-# mason_bricks
+# mason_example
 
-A new Flutter project.
+# pubspec.yaml
+Its important to have these moved inside dev_dependencies so build runner works
+```
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  freezed: ^2.4.6
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.7
+  flutter_lints: ^2.0.0
+```
 
-## Getting Started
+# analysis_options
+```
+analyzer:
+  exclude: 
+    - bricks/**
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.mocks.dart"
+```
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# gitignore
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# mason_bricks
+```
+*.g.dart
+*.freezed.dart
+.env
+*.config.dart
+*.gr.dart
+```
+
+
+
+# mason commands
+
+mason make new_feature
