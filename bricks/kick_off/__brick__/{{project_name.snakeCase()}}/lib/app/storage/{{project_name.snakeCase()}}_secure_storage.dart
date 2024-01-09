@@ -4,10 +4,12 @@ import 'package:injectable/injectable.dart';
 
 abstract class SecureStorage {
   Future<void> storeAccessToken(String token);
-  Future<String> getAccessToken();
+  Future<String?> getAccessToken();
 
   Future<void> storeUserId(String userId);
-  Future<String> getUserId();
+  Future<String?> getUserId();
+
+  Future<void> clearStorage();
 }
 
 @Singleton(as: SecureStorage)
@@ -22,8 +24,8 @@ class SecureStorageImpl implements SecureStorage {
   }
 
   @override
-  Future<String> getAccessToken() async {
-    return await _storage.read(key: SecureStorageConstants.accessToken) ?? '';
+  Future<String?> getAccessToken() async {
+    return await _storage.read(key: SecureStorageConstants.accessToken);
   }
 
   @override
@@ -32,7 +34,12 @@ class SecureStorageImpl implements SecureStorage {
   }
 
   @override
-  Future<String> getUserId() async {
-    return await _storage.read(key: SecureStorageConstants.userId) ?? '';
+  Future<String?> getUserId() async {
+    return await _storage.read(key: SecureStorageConstants.userId);
+  }
+
+  @override
+  Future<void> clearStorage() async {
+    await _storage.deleteAll();
   }
 }
