@@ -11,7 +11,7 @@
 ### new_feature
 - defaults generation into current directory inside **/lib** folder
 
-Optional structures\n
+Optional structures\
 **with** state management
 ```
 new_feature
