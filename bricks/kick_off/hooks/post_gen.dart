@@ -15,6 +15,7 @@ Future<void> run(HookContext context) async {
     'injectable',
     'shared_preferences',
     'flutter_secure_storage',
+    'auto_route',
   ];
 
   final devPackages = [
@@ -23,6 +24,7 @@ Future<void> run(HookContext context) async {
     'build_runner',
     'injectable_generator',
     'flutter_gen',
+    'auto_route_generator',
   ];
 
   final directory = context.vars['project_name'];
