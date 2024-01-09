@@ -2,7 +2,10 @@ import 'dart:io';
 import 'package:mason/mason.dart';
 
 Future<void> run(HookContext context) async {
-  final progress = context.logger.progress('Installing packages');
+  final progress = context.logger.progress('Processing');
+  context.logger.info('\nSetting up your application...\n\n');
+
+
 
   final packages = [
     'freezed_annotation',
@@ -10,6 +13,8 @@ Future<void> run(HookContext context) async {
     'flutter_lints',
     'get_it',
     'injectable',
+    'shared_preferences',
+    'flutter_secure_storage',
   ];
 
   final devPackages = [
@@ -21,30 +26,22 @@ Future<void> run(HookContext context) async {
   ];
 
   final directory = context.vars['project_name'];
+  context.logger.info('\nAdding packages...');
+  await Process.run('fvm', ['flutter', 'pub', 'add', ...packages],
+      workingDirectory: directory);
 
-  for (var package in packages) {
-    context.logger.info('Adding $package');
-    await Process.run('fvm', ['flutter', 'pub', 'add', package],
-        workingDirectory: directory);
-  }
+  context.logger.info('\nAdding dev packages...');
+  await Process.run('fvm', ['flutter', 'pub', 'add', '--dev', ...devPackages],
+      workingDirectory: directory);
 
-  for (var package in devPackages) {
-    context.logger.info('Adding dev $package');
-    await Process.run('fvm', ['flutter', 'pub', 'add', '--dev', package],
-        workingDirectory: directory);
-  }
+  context.logger.info('\nCleaning project...');
+  await Process.run('fvm', ['flutter', 'clean'], workingDirectory: directory);
 
-  // Run `flutter packages get` after generation.
-  await Process.run(
-    'fvm',
-    [
-      'flutter',
-      'packages',
-      'get',
-    ],
-    workingDirectory: directory,
-  );
+  context.logger.info('\nGetting packages...');
+  await Process.run('fvm', ['flutter', 'pub', 'get'],
+      workingDirectory: directory);
 
+  context.logger.info('\nRunning build_runner...');
   await Process.run(
       'fvm',
       [
@@ -58,4 +55,8 @@ Future<void> run(HookContext context) async {
       workingDirectory: directory);
 
   progress.complete();
+
+  context.logger.info('In order to run your application, type:\n');
+  context.logger.info('  \$ cd $directory');
+  context.logger.info('  \$ flutter run');
 }
