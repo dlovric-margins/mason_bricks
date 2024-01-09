@@ -16,6 +16,36 @@ brew tap felangel/mason && brew install mason
 - new_feature
 - pubspec_setup
 
+**new_feature** defaults generation into current directory inside **/lib** folder with this structure
+
+with **state_management**
+```
+new_feature
+    core
+        entities
+        models
+        home_repo.dart
+        home_source.dart
+    presentation
+        logic
+            new_feature_cubit
+                new_feature_cubit.dart
+                new_feature_state.dart
+        view
+            new_feature_screen.dart
+        widgets
+```
+or without **state_management**
+```
+new_feature
+    presentation
+        view
+            new_feature_screen.dart
+        widgets
+```
+
+**pubspec_setup** defaults generation into current directory
+
 
 ## Add bricks globaly
 Adding bricks to global mason to avoid **mason init** in every project

@@ -28,6 +28,13 @@ environment:
 vars:
   feature_name:
     type: string
-    description: Your name
+    description: Feature name
     default: new_feature
     prompt: What is the name of this new feature?
+  
+  uses_state_management:
+    type: boolean
+    description: Whether or not to use state management
+    default: true
+    prompt: Would you like to use state management?
+
