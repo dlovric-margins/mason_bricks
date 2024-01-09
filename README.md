@@ -9,6 +9,7 @@ or
 brew tap felangel/mason && brew install mason
 ```
 \
+
 \
 
 ## Currently available bricks:
@@ -46,6 +47,7 @@ new_feature
 **pubspec_setup** defaults generation into current directory
 
 \
+
 \
 
 ## Add bricks globaly
@@ -59,10 +61,12 @@ mason add -g new_feature --git-url https://github.com/dlovric-margins/mason_bric
 - "--git-url" is the git url of directory containing bricks
 - "--git-path" is the git path for specific brick
 \
+
 \
 ## Checking installed bricks
 ```mason ls -g``` will list global bricks that were added using "mason add -g"
 \
+
 \
 ## Using bricks
 Enter the desired flutter project directory
