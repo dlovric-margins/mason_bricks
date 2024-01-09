@@ -64,7 +64,7 @@ dev_dependencies
 
 ## Add bricks
 
-Entered desired repository (your project)
+Enter desired repository (your project)
 
 run in terminal ``mason init``
 
@@ -74,21 +74,20 @@ add mason files to .gitignore
 /.mason
 ```
 
+Adding brick to mason.yaml:
 ```
 mason add new_feature --git-url https://github.com/dlovric-margins/mason_bricks --git-path bricks/new_feature
 ```
 - "mason add" adds feature
 - "new_feature" is the name of brick
-- "--git-url" is the git url of directory containing bricks
+- "--git-url" is the git url of directory containing bricks (never changes)
 - "--git-path" is the git path for specific brick
 
 
 
 
 ## Checking installed bricks
-```mason ls -g``` will list global bricks that were added using "mason add -g"
-
-
+``mason ls`` will list local bricks that were added using ``mason add``
 
 
 ## Using bricks
@@ -98,7 +97,7 @@ mason add new_feature --git-url https://github.com/dlovric-margins/mason_bricks 
 
 ## Updating bricks if new changes we pushed to github
 
-Entered desired repository (your project)
+Enter desired repository (your project)
 
 run in terminal
 1. ``mason cache clear``
