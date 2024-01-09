@@ -11,6 +11,7 @@
 
 class StorageConstants {
   static String isUsingBiometrics = 'isUsingBiometrics';
+  static String isDarkMode = 'isDarkMode';
 }
 
 class SecureStorageConstants {

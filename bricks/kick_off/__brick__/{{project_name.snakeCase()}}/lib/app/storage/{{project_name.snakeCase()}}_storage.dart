@@ -11,11 +11,14 @@ class {{project_name.pascalCase()}}Storage {
   // Getters  
   bool get isUsingBiometrics =>
       _prefs.getBool(StorageConstants.isUsingBiometrics) ?? true;
-
+  bool get isDarkMode =>
+      _prefs.getBool(StorageConstants.isDarkMode) ?? true;
 
   // Setters
   set isUsingBiometrics(bool value) =>
       _updateBool(StorageConstants.isUsingBiometrics, value);
+  set isDarkMode(bool value) =>
+      _updateBool(StorageConstants.isDarkMode, value);
 
   // Functions
   void _updateBool(String key, bool? value) =>
