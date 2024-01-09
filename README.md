@@ -24,8 +24,8 @@ new_feature
     core
         entities
         models
-        home_repo.dart
-        home_source.dart
+        new_feature_repo.dart
+        new_feature_source.dart
     presentation
         logic
             new_feature_cubit
