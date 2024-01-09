@@ -11,8 +11,8 @@
 ### new_feature
 - defaults generation into current directory inside **/lib** folder
 
-Optional structures\
-**with** state management
+Optional structures:\
+*with* state management
 ```
 new_feature
     core
@@ -29,7 +29,7 @@ new_feature
             new_feature_screen.dart
         widgets
 ```
-or **without** state management
+*without* state management
 ```
 new_feature
     presentation
