@@ -16,7 +16,9 @@ brew tap felangel/mason && brew install mason
 - new_feature
 - pubspec_setup
 
-**new_feature** defaults generation into current directory inside **/lib** folder with this structure
+- **pubspec_setup** defaults generation into current directory
+
+- **new_feature** defaults generation into current directory inside **/lib** folder with this structure
 
 with **state_management**
 ```
@@ -43,8 +45,6 @@ new_feature
             new_feature_screen.dart
         widgets
 ```
-
-**pubspec_setup** defaults generation into current directory
 
 
 
