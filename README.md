@@ -11,13 +11,12 @@ brew tap felangel/mason && brew install mason
 
 
 
-
 ## Currently available bricks:
 - new_feature
 - pubspec_setup
 
-**pubspec_setup** defaults generation into current directory\
-**new_feature** defaults generation into current directory inside **/lib** folder with this structure
+### new_feature
+- defaults generation into current directory inside **/lib** folder with this structure\
 
 with **state_management**
 ```
@@ -45,6 +44,26 @@ new_feature
         widgets
 ```
 
+### pubspec_setup
+- defaults generation into current directory
+- generates pubspec.yaml with these packages
+```
+dependencies
+    cupertino_icons,
+    retrofit,
+    injectable,
+    dio,
+    freezed_annotation,
+    injectable_generator,
+    retrofit_generator,
+    flutter_bloc,
+
+dev_dependencies
+    freezed,
+    json_serializable,
+    build_runner,
+    flutter_lints,
+```
 
 
 
