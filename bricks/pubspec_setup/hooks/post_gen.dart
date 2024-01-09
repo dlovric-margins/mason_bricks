@@ -32,6 +32,14 @@ Future<void> run(HookContext context) async {
 
   // Run `flutter packages get` after generation.
   await Process.run('fvm', ['flutter', 'pub', 'get']);
+  await Process.run('fvm', [
+      'flutter',
+      'pub',
+      'run',
+      'build_runner',
+      'build',
+      '--delete-conflicting-outputs'
+    ]);
 
   progress.complete();
 }
