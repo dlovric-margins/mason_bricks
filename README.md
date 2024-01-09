@@ -31,7 +31,7 @@ new_feature
         logic
             new_feature_cubit
                 new_feature_cubit.dart
-                new_feature_state.dart
+                new_feature_state.dart 
         view
             new_feature_screen.dart
         widgets
@@ -69,5 +69,5 @@ mason add -g new_feature --git-url https://github.com/dlovric-margins/mason_bric
 
 
 ## Using bricks
-Enter the desired flutter project directory
-Run in terminal ``mason make new_feature`` where **new_feature** is the brick we are using
+1. Enter the desired flutter project directory
+2. Run in terminal ``mason make new_feature`` where **new_feature** is the brick we are using
