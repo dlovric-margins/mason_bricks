@@ -69,13 +69,22 @@ dev_dependencies
 
 
 
-## Add bricks globaly
-Adding bricks to global mason to avoid **mason init** in every project
+## Add bricks
+
+Entered desired repository (your project)
+
+run in terminal ``mason init``
+
+add mason files to .gitignore
 ```
-mason add -g new_feature --git-url https://github.com/dlovric-margins/mason_bricks --git-path bricks/new_feature
+/mason.yaml
+/.mason
+```
+
+```
+mason add new_feature --git-url https://github.com/dlovric-margins/mason_bricks --git-path bricks/new_feature
 ```
 - "mason add" adds feature
-- "-g" global mason cache
 - "new_feature" is the name of brick
 - "--git-url" is the git url of directory containing bricks
 - "--git-path" is the git path for specific brick
@@ -92,3 +101,14 @@ mason add -g new_feature --git-url https://github.com/dlovric-margins/mason_bric
 ## Using bricks
 1. Enter the desired flutter project directory
 2. Run in terminal ``mason make new_feature`` where **new_feature** is the brick we are using
+
+
+## Updating bricks if new changes we pushed to github
+
+Entered desired repository (your project)
+
+run in terminal
+1. ``mason cache clear``
+2. ``mason get``
+
+This will clear cache and get all bricks that are added to mason.yaml
