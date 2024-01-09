@@ -16,7 +16,7 @@ brew tap felangel/mason && brew install mason
 - pubspec_setup
 
 ### new_feature
-- defaults generation into current directory inside **/lib** folder\
+- defaults generation into current directory inside **/lib** folder
 
 Optional structures\n
 **with** state management
@@ -46,7 +46,8 @@ new_feature
 ```
 
 ### pubspec_setup
-- defaults generation into current directory\
+- defaults generation into current directory
+
 Generates pubspec.yaml with these packages
 ```
 dependencies
