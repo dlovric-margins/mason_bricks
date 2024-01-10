@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:{{project_name.snakeCase()}}/app/app_bloc/app_bloc.dart';
 import 'package:{{project_name.snakeCase()}}/app/services/service_locator.dart';
+import 'package:{{project_name.snakeCase()}}/app/router/router.dart';
 
 @RoutePage()
 class EntryPointScreen extends StatefulWidget {
@@ -24,7 +25,9 @@ class _EntryPointScreenState extends State<EntryPointScreen> {
               state.when(
                 loading: () {},
                 authenticated: () {},
-                unauthenticated: () {},
+                unauthenticated: () {
+                  context.router.push(const DummyRoute());
+                },
               );
             },
             child: AutoRouter(
