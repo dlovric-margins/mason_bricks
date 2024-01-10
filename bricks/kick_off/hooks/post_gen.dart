@@ -32,7 +32,7 @@ Future<void> run(HookContext context) async {
   ];
   
 
-  final directory = context.vars['project_name'];
+  final directory = context.vars['directory_name'];
   context.logger.info('\nAdding packages...');
   await Process.run('fvm', ['flutter', 'pub', 'add', ...packages],
       workingDirectory: directory);

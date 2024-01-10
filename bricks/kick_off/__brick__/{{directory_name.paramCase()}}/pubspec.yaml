@@ -1,4 +1,4 @@
-name: '{{ project_name }}'
+name: '{{ project_name.snakeCase() }}'
 description: Project created by Margins brick.
 version: 1.0.0+1
 publish_to: none

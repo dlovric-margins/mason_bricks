@@ -26,6 +26,11 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
+
+  directory_name:
+    type: string
+    prompt: Name of your project directory?
+
   project_name:
     type: string
     prompt: Name of your project?
