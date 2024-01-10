@@ -17,7 +17,7 @@
 .idea/*
 
 # Env variables
-.env
+# .env
 
 # Visual Studio Code related
 .classpath
@@ -63,7 +63,6 @@ unlinked_spec.ds
 .fvm/flutter_sdk
 *.g.dart 
 *.freezed.dart
-.env
 *.config.dart
 *.gr.dart
 
