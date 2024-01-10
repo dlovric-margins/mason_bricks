@@ -2,6 +2,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:{{project_name.snakeCase()}}/app/services/service_locator.dart';
 import 'package:{{project_name.snakeCase()}}/app/storage/{{project_name.snakeCase()}}_secure_storage.dart';
+import 'package:injectable/injectable.dart';
 
 part 'app_event.dart';
 part 'app_state.dart';
