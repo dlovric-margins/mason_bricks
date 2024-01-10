@@ -1,5 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:injectable/injectable.dart';
+import 'package:{{project_name.snakeCase()}}/entrypoint.dart';
+import 'package:{{project_name.snakeCase()}}/dummy_screen.dart';
+
 
 part 'router.gr.dart';
 
@@ -8,6 +11,14 @@ part 'router.gr.dart';
 class AppRouter extends _$AppRouter {
   @override
   final List<AutoRoute> routes = [
-    //example: AutoRoute(page: HomeRoute.page, initial: true)
+    AutoRoute(
+      path: '/',
+      page: EntryPointRoute.page,
+      children: [
+        AutoRoute(
+          page: DummyRoute.page,
+        ),
+      ],
+    ),
   ];
 }

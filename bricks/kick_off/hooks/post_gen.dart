@@ -3,7 +3,7 @@ import 'package:mason/mason.dart';
 
 Future<void> run(HookContext context) async {
   final progress = context.logger.progress('Processing');
-  context.logger.info('\nSetting up your application...\n\n');
+  context.logger.info('\nSetting up your application...\n');
 
   final packages = [
     'freezed_annotation',
@@ -15,6 +15,10 @@ Future<void> run(HookContext context) async {
     'flutter_secure_storage',
     'auto_route',
     'envied',
+    'flutter_screenutil',
+    'loggy',
+    'flutter_loggy',
+    'flutter_loggy_dio',
   ];
 
   final devPackages = [
@@ -26,6 +30,7 @@ Future<void> run(HookContext context) async {
     'auto_route_generator',
     'envied_generator',
   ];
+  
 
   final directory = context.vars['project_name'];
   context.logger.info('\nAdding packages...');
