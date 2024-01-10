@@ -5,8 +5,6 @@ Future<void> run(HookContext context) async {
   final progress = context.logger.progress('Processing');
   context.logger.info('\nSetting up your application...\n\n');
 
-
-
   final packages = [
     'freezed_annotation',
     'flutter_bloc',
@@ -16,6 +14,7 @@ Future<void> run(HookContext context) async {
     'shared_preferences',
     'flutter_secure_storage',
     'auto_route',
+    'envied',
   ];
 
   final devPackages = [
@@ -25,6 +24,7 @@ Future<void> run(HookContext context) async {
     'injectable_generator',
     'flutter_gen',
     'auto_route_generator',
+    'envied_generator',
   ];
 
   final directory = context.vars['project_name'];
