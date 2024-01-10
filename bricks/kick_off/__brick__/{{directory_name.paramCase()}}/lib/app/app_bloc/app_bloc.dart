@@ -7,6 +7,7 @@ part 'app_event.dart';
 part 'app_state.dart';
 part 'app_bloc.freezed.dart';
 
+@singleton
 class AppBloc extends Bloc<AppEvent, AppState> {
   AppBloc() : super(const AppState.loading()) {
     on<AppEvent>((event, emit) async {

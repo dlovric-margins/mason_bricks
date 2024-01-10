@@ -63,7 +63,7 @@ Future<void> run(HookContext context) async {
 
   progress.complete();
 
-  context.logger.info('In order to run your application, type:\n');
+  context.logger.info('\nIn order to run your application, type:\n');
   context.logger.info('  \$ cd $directory');
   context.logger.info('  \$ flutter run');
 }
