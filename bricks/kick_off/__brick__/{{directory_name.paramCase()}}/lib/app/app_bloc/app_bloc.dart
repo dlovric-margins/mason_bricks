@@ -13,7 +13,7 @@ class AppBloc extends Bloc<AppEvent, AppState> {
   AppBloc() : super(const AppState.loading()) {
     on<AppEvent>((event, emit) async {
       
-      Future<void> _logOut() async {
+      Future<void> logOut() async {
         await sl<SecureStorage>().clearStorage();
         emit(const AppState.unauthenticated());
       }
@@ -21,17 +21,17 @@ class AppBloc extends Bloc<AppEvent, AppState> {
       await event.when(
         checkStatus: () async {
           final accessToken = await sl<SecureStorage>().getAccessToken();
-          if (accessToken == null) await _logOut();
+          if (accessToken == null) await logOut();
 
           try {
             // get user asnycronously
             emit(const AppState.authenticated());
           } catch (e) {
-            await _logOut();
+            await logOut();
           }
         },
         logOut: () async {
-          await _logOut();
+          await logOut();
         },
       );
     });

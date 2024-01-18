@@ -19,6 +19,8 @@ Future<void> run(HookContext context) async {
     'loggy',
     'flutter_loggy',
     'flutter_loggy_dio',
+    'dio',
+    'pretty_dio_logger',
   ];
 
   final devPackages = [
