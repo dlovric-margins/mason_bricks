@@ -52,3 +52,4 @@ app.*.map.json
 /.mason
 /.idea
 /.fvm
+analysis_options.yaml
