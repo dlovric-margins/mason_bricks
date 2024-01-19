@@ -26,11 +26,18 @@ environment:
 #  * a list of values (enums only)
 #  * an optional separator (list only)
 vars:
-
   directory_name:
     type: string
-    prompt: Name of your project directory?
+    prompt: Name of your project directory? (paramCase for example "groth-app")
 
   project_name:
     type: string
-    prompt: Name of your project?
+    prompt: Name of your project? (lowerCase without spaces for example "grothapp")
+
+  identifier:
+    type: string
+    prompt: Identifier of your project? (reverse domain for example "host.companyName.appName", "com.groth.grothapp" or "hr.hlk.hlk")
+
+  display_name:
+    type: string
+    prompt: Display name of your project? (for example "Groth")

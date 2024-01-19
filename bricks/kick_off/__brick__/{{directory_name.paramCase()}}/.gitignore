@@ -17,7 +17,7 @@
 .idea/*
 
 # Env variables
-# .env
+/.env
 
 # Visual Studio Code related
 .classpath
